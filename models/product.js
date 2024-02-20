@@ -25,6 +25,14 @@ const productSchema = mongoose.Schema({
     type: Number,
     default: "0",
   },
+  discount: {
+    type: Number,
+    default: "0",
+  },
+  rating: {
+    type: Number,
+    default: "0",
+  },
   category: {
     type: String,
     required: true,

@@ -49,6 +49,8 @@ exports.createProduct = async (req, res) => {
             images: req.body.image,
             brand: req.body.brand,
             price: req.body.price,
+            price: req.body.discount,
+            rating: req.body.rating,
             category: req.body.category,
             countInStock: req.body.countInStock,  
             isFeatured: req.body.isFeatured,
