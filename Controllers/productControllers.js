@@ -40,19 +40,17 @@ exports.getProductById = async (req, res) => {
 };
 
 exports.createProduct = async (req, res) => {
-    
     try {
         
         let product = new Product({
             name: req.body.name,
             description: req.body.description,
             richDescription: req.body.richDescription,
-            images: req.body.image[0],
+            images: req.body.image,
             brand: req.body.brand,
             price: req.body.price,
             category: req.body.category,
-            countInStock: req.body.countInStock,
-           
+            countInStock: req.body.countInStock,  
             isFeatured: req.body.isFeatured,
         });
 
