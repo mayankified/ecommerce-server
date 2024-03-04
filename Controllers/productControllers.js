@@ -17,7 +17,7 @@ exports.getProducts = async (req, res) => {
     }
 
     try {
-        const productList = await Product.find(filter).populate('category');
+        const productList = await Product.find({})
         res.status(200).json(productList);
     } catch (error) {
         console.error(error);
