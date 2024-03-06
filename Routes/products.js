@@ -9,7 +9,7 @@ require("dotenv").config();
 
 router.post("/get", productController.getProducts);
 
-router.get("/:id", productController.getProductById);
+router.post("/:id", productController.getProductById);
 
 router.post("/",  productController.createProduct);
 
