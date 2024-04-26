@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 
 exports.Mongod = () => {
   mongoose
-    .connect("mongodb+srv://mayanklander:Z4SimtdSmzaJ3et4@ecommm.yz5gtge.mongodb.net/?retryWrites=true&w=majority", {
+    .connect("mongodb+srv://mayanklander:abcdefgh@ecommm.yz5gtge.mongodb.net/?retryWrites=true&w=majority", {
       dbName: "UserAuth",
     })
     .then(() => {

@@ -4,10 +4,11 @@ const { Mongod } = require("./database/Mongo.js");
 const cors=require('cors');
 const app = express();
 const dotenv = require('dotenv');
-const fs = require('fs')
 
 app.use(cookieParser());
 app.use(express.json());
+
+
 
 app.use(cors({
   origin: 'http://localhost:5173', // Allow requests from this origin

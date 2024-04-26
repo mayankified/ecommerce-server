@@ -6,7 +6,6 @@ const sendToken = require("../Utils/jwtToken");
 const { sendResetEmail, sendverifyEmail } = require("../Utils/sendEmail");
 const ErrorHandler = require("../Utils/errorHandler");
 
-const genOTP = require("../Utils/otpgenerator.js");
 
 // const authenticateUser=require("../utils/authentication");
 // Function for registering the user
@@ -21,19 +20,16 @@ exports.register = async (req, res) => {
         .status(401)
         .json({ success: false, message: "Email id Already in use" });
     }
-    const otp = genOTP();
 
-    sendverifyEmail(email, otp);
     const user = await User.create({
       name,
       email,
       password,
-      otp,
     });
 
-    res.status(201).json({
+    res.status(200).json({
       success: true,
-      message: "User registered. OTP sent for verification.",
+      message: "User registered",
     });
   } catch (error) {
     console.error("Registration error:", error);
